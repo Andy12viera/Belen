@@ -1,18 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San Valentín Invite</title>
-</head>
-<body>
-    <h1>¡Te invito a una celebración de San Valentín!</h1>
-    <p>No olvides traer algo especial para compartir.</p>
-
-    <script>
-        // Código para el evento
-        console.log("¡Nos vemos en la celebración!");
-        // Aquí puedes agregar más interactividad en el futuro.
-    </script>
-</body>
-</html>
+<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Valentine's Invitation</title>\n    <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css\" rel=\"stylesheet\">\n    <script src=\"https://cdn.tailwindcss.com\"></script>\n    <style>\n        body {\n            background: linear-gradient(45deg, #ff6b6b, #f7e3b2);\n            animation: gradient 5s ease infinite;\n            overflow: hidden;\n            height: 100vh;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n        }\n        @keyframes gradient {\n            0% { background-position: 0% 50%; }\n            50% { background-position: 100% 50%; }\n            100% { background-position: 0% 50%; }\n        }\n        .hearts {\n            position: absolute;\n            animation: float 5s ease-in-out infinite;\n        }\n        @keyframes float {\n            0% { transform: translateY(0); }\n            50% { transform: translateY(-20px); }\n            100% { transform: translateY(0); }\n        }\n        .button {\n            padding: 1rem 2rem;\n            font-size: 1.5rem;\n            cursor: pointer;\n            margin: 1rem;\n        }\n        .no-button {\n            position: relative;\n        }\n        .no-button:hover {\n            animation: evade 1s infinite;\n        }\n        @keyframes evade {\n            0% { transform: translate(0); }\n            50% { transform: translate(20px, -20px); }\n            100% { transform: translate(0); }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"invitation\">\n        <h1 class=\"text-4xl font-bold text-center mt-10\">You're Invited!</h1>\n        <p class=\"text-xl text-center\">Join us for a special Valentine's celebration!</p>\n        <div class=\"flex justify-center\">\n            <button class=\"button bg-red-500 text-white\" id=\"yes-button\">Yes</button>\n            <button class=\"button no-button bg-gray-300 text-black\" id=\"no-button\">No</button>\n        </div>\n        <div class=\"hearts\">\n            <i class=\"fas fa-heart fa-2x\"></i>\n            <i class=\"fas fa-heart fa-2x\"></i>\n            <i class=\"fas fa-heart fa-2x\"></i>\n        </div>\n    </div>\n    <script>\n        document.getElementById('yes-button').onclick = function() {\n            alert('Success!\nSee you on February 24, 2026, at 21:00');\n        };\n        document.getElementById('no-button').onclick = function() {\n            alert('Too bad!');\n        };\n    </script>\n</body>\n</html>\n
